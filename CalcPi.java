@@ -36,8 +36,8 @@ else {
 double FinalSum = (sumPlus - sumMinus)*4;
 //pi according to Java:
 //pi, approximated:
-System.out.println("pi according to Java:" +" "+pai);
-System.out.println("pi, approximated:" +"     "+FinalSum);
+System.out.println("pi according to Java:"+" "+pai);
+System.out.println("pi, approximated:     "+FinalSum);
 
 	}
 }
