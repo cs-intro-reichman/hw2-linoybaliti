@@ -8,31 +8,31 @@ public class CalcPi {
 	double sumMinus = 0;
 	
 	if (counter %2 == 0 ){
-		double x = 1; 
-		double y = 1; 
+		double x = 1.0; 
+		double y = 1.0; 
 		for (int i = 0; i<counter/2; i++){
 		sumPlus += x/y;
-		y = y+4;
+		y = y+4.0;
 }
-		double xx = 1; 
-		double yy = 3; 
+		double xx = 1.0; 
+		double yy = 3.0; 
 		for (int i = 0; i<counter/2; i++){
 		sumMinus += xx/yy;
-		yy = yy+4;
+		yy = yy+4.0;
 }
 	}
 else {
-		double x = 1; 
-		double y = 1; 
+		double x = 1.0; 
+		double y = 1.0; 
 		for (int i = 0; i<counter/2 +1; i++){
 		sumPlus += x/y;
-		y = y+4;
+		y = y+4.0;
 }
-		double xx = 1; 
-		double yy = 3; 
+		double xx = 1.0; 
+		double yy = 3.0; 
 		for (int i = 0; i<counter/2; i++){
 		sumMinus += xx/yy;
-		yy = yy+4;
+		yy = yy+4.0;
 }
 
 }
@@ -40,7 +40,7 @@ double FinalSum = (sumPlus - sumMinus)*4;
 //pi according to Java:
 //pi, approximated:
 System.out.println("pi according to Java:"+" "+pai);
-System.out.println("pi, approximated:"+" "+FinalSum);
+System.out.println("pi, approximated:"+"     "+FinalSum);
 
 	}
 }
