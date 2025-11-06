@@ -9,7 +9,7 @@ Great work boaz!
 public class Cheers {
         public static void main(String[] args) {
 	    // Replace this comment with your code
-         String name = args[0];
+         String name = args[0].toUpperCase(); // שכל האויתות שנקלטות יומרו לאות גדולה
          int num = Integer.parseInt(args[1]);
          int NameLength = name.length();
 
@@ -17,14 +17,14 @@ public class Cheers {
                  char c =  name.charAt(i);
                      if (c == 'A' || c == 'E' || c == 'F' || c == 'H' || c == 'I' || c == 'L' ||
                   c == 'M' ||   c == 'N' ||   c == 'O' ||   c == 'R' || c == 'S' || c == 'X' ){
-                      System.out.println("Give" + " " + "me" + " " + "An" + " " + c + ":" + " " + c + "!" );
+                      System.out.println("Give"+" "+"me"+" "+"An"+" "+ c+":"+" "+c+"!");
                          }
                          else {
-                      System.out.println("Give" + " " + "me" + " " + "A" + " " + c + ":" + " " + c + "!" );
+                      System.out.println("Give"+" "+"me"+" "+"A" +" "+c+":"+" "+c+"!");
                          }
                         
         }
-        System.out.println("what does that spell?" );
+        System.out.println("What does that spell?" );
 
                 for (int j=0; j<num; j++){ // לולאה שרצה ככמות המספר שקלטנו
                 System.out.println(name + "!!!" );
