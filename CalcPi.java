@@ -1,43 +1,28 @@
-// Computes an approximation of PI.
 public class CalcPi {
-	public static void main(String [] args) { 
-	  
-	int counter = Integer.parseInt(args[0]);
-	double pai = Math.PI;
-	double sumPlus = 0; 
-	double sumMinus = 0;
-	
-	if (counter %2 == 0 ){
-		double y = 1.0; 
-		for (int i = 0; i<counter/2; i++){
-		sumPlus += 1.0/y;
-		y = y+4.0;
-}
-	
-		double yy = 3.0; 
-		for (int i = 0; i<counter/2; i++){
-		sumMinus += 1.0/yy;
-		yy = yy+4.0;
-}
-	}
-else {
-		double y = 1.0; 
-		for (int i = 0; i<counter/2 +1; i++){
-		sumPlus += 1.0/y;
-		y = y+4.0;
-}
-		double yy = 3.0; 
-		for (int i = 0; i<counter/2; i++){
-		sumMinus += 1.0/yy;
-		yy = yy+4.0;
-}
+    public static void main(String[] args) {
+        // Check for a valid command-line argument
+        if (args.length != 1) {
+            System.out.println("Usage: java CalcPi <number of terms>");
+            return;
+        }
 
-}
-double FinalSum = (sumPlus - sumMinus)*4;
-//pi according to Java:
-//pi, approximated:
-System.out.println("pi according to Java:"+" "+pai);
-System.out.println("pi, approximated:     "+FinalSum);
+        int n = Integer.parseInt(args[0]); // number of terms
+        double sum = 0.0;
 
-	}
+        // Gregory-Leibniz series: π/4 = 1 - 1/3 + 1/5 - 1/7 + ...
+        for (int i = 0; i < n; i++) {
+            double term = 1.0 / (2 * i + 1);
+            if (i % 2 == 0) {
+                sum += term;  // add when i is even
+            } else {
+                sum -= term;  // subtract when i is odd
+            }
+        }
+
+        double approxPi = 4 * sum;
+
+        // Output results
+        System.out.println("pi according to Java: " + Math.PI);
+        System.out.println("pi, approximated: " + approxPi);
+    }
 }
