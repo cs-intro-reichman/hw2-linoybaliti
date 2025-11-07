@@ -17,7 +17,8 @@ public class CalcPi {
 
         double approxPi = 4 * sum;
 
+        // Exact formatting match: 5 spaces + 16 digits after decimal
         System.out.println("pi according to Java: 3.141592653589793");
-        System.out.printf("pi, approximated:     %.15f%n", approxPi);
+        System.out.printf("pi, approximated:     %.16f%n", approxPi);
     }
 }
