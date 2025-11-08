@@ -2,5 +2,31 @@
 public  class  TestRandom {
 	public static void main(String[]  args) {
 	    // Replace this comment with your code
+
+
+		int counter = Integer.parseInt(args[0]);
+		int counterL = 0;
+		int counterS = 0;
+		for (int i=0; i<counter; i++){
+			double num = (Math.random()*2);
+			if (num > 0.5 ){
+				counterL++;
+			}
+			else {
+				counterS ++;
+			}
+
+		}
+		if (counterS != 0){
+		double ratio = (double)counterL/counterS;
+ 		System.out.println(">"  + " " + "0.5:" + counterL);
+		System.out.println("<="  + " " + "0.5:" + counterS);
+		System.out.println("Ratio:" + ratio );
+		}
+		else {
+		System.out.println(">"  + " " + "0.5:" + counterL);
+		System.out.println("<="  + " " + "0.5:" + counterS);
+		}
+
 	}
 }
